@@ -1,25 +1,63 @@
-import logo from './logo.svg';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React, { useState, useEffect } from 'react';
+// import axios from 'axios';
+
+export default function App()  {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [mobile, setMobile] = useState('');
+  const [caseType, setCaseType] = useState('');
+  const [description, setDescription] = useState('');
+  
+
+function handleSubmit(){
+  
 }
 
-export default App;
+ 
+  
+
+  return (
+    <div>
+      <h1>Hospital Appointments</h1>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Mobile"
+          value={mobile}
+          onChange={(e) => setMobile(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Case Type"
+          value={caseType}
+          onChange={(e) => setCaseType(e.target.value)}
+        />
+        <textarea
+          placeholder="Description"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+        ></textarea>
+        <button type="submit">Book Appointment</button>
+      </form>
+      <h2>All Appointments</h2>
+      
+    </div>
+  );
+
+  };
+
