@@ -1,6 +1,6 @@
 
 import './App.css';
-
+import "./styles.css"
 import React, { useState, useEffect } from 'react';
 // import axios from 'axios';
 
@@ -20,7 +20,7 @@ function handleSubmit(){
   
 
   return (
-    <div>
+    <div className='appointment'>
       <h1>Hospital Appointments</h1>
       <form onSubmit={handleSubmit}>
         <input
@@ -52,6 +52,7 @@ function handleSubmit(){
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         ></textarea>
+        <br></br>
         <button type="submit">Book Appointment</button>
       </form>
       <h2>All Appointments</h2>
