@@ -1,7 +1,7 @@
 
 import './App.css';
 import "./styles.css"
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 // import axios from 'axios';
 
 export default function App()  {
@@ -13,7 +13,7 @@ export default function App()  {
   
 
 function handleSubmit(){
-  
+   
 }
 
  
@@ -52,6 +52,7 @@ function handleSubmit(){
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         ></textarea>
+        <br></br>
         <br></br>
         <button type="submit">Book Appointment</button>
       </form>

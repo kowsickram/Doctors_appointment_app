@@ -11,7 +11,6 @@ body{
     justify-content: center;
     display: flex;
     flex-flow: column;
-   
     
 }
 h1{
@@ -26,8 +25,20 @@ input{
     flex-flow: nowrap;
     margin: 20px;
     border: none;
+    border-bottom:2px solid blue;
     width: 300px;
     outline: none;
     height: 30px;
     padding: 2px;
+    background-color: transparent;
+}
+input:hover{
+    outline-offset: 5px;
+}
+button{
+    align-content: center;
+}
+textarea{
+    border: none;
+    outline: none;
 }
