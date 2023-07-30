@@ -56,19 +56,30 @@ const App = () => {
         <br></br>
       </form>
 
+      
       <h2>All Appointments</h2>
-      <ul>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Mobile Number</th>
+          <th>Type of Case</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
         {appointments.map((appointment) => (
-          <li key={appointment.id}>
-            <p>Name: {appointment.name}</p>
-            <p>Email: {appointment.email}</p>
-            <p>Mobile Number: {appointment.mobileNumber}</p>
-            <p>Type of Case: {appointment.caseType}</p>
-            <p>Description: {appointment.description}</p>
-            <hr />
-          </li>
+          <tr key={appointment.id}>
+            <td>{appointment.name}</td>
+            <td>{appointment.email}</td>
+            <td>{appointment.mobileNumber}</td>
+            <td>{appointment.caseType}</td>
+            <td>{appointment.description}</td>
+          </tr>
         ))}
-      </ul>
+      </tbody>
+    </table>
     </div>
   );
 };
